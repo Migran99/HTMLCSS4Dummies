@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="usuario" >
+		<title>HTML y CSS</title>
+	</head>
+	<body>
+		<h1 id="titulo">HTML Y CSS</h1>
+		
+		<! ----------------------Barra navegacion arriba----------------------- >
+		<nav>
+			<a href="index.html">Índice</a>
+			<a href="html.html">HTML</a>
+			<a href="css.html">CSS</a>
+			<a class="right" href="creditos.html">Créditos</a>
+			
+		</nav>
+		
+		<! ----------------------Barra navegacion lateral----------------------- >
+		<nav id = "latnav">
+			<a href="#introcss" class="block">Introducción a CSS</a>
+			<a href="#inclucss" class="block">Inclusión en HTML</a>
+			<a href="#seleccss" class="block">Selectores</a>
+			<a href="#cajacss" class="block">Modelo de Cajas</a>
+			<a href="#poscss" class="block">Posicionamiento</a>
+		</nav>
+		
+		<! ----------------------Contenido----------------------- >
+		<div id="content">
+		
+		<! ----------------------Introduccion CSS----------------------- >
+			<h1>Introducción CSS <button class = "right" onclick="slidevis('introcss')">👀</button></h1>
+			<div id="introcss">
+			<p>
+            Las Hojas de Estilo en Cascada (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)
+        definen el formato o estilo para la presentación del documento.
+        </p>
+   		</div>
+		<! ---------E---N---D----Introduccion CSS----------------------- >
+   	
+   		<! ----------------------Inclusion HTML----------------------- >
+    	<h1>Inclusión en el documento HTML <button class = "right" onclick="slidevis('inclucss')">👀</button></h1>
+    	<div id="inclucss">
+        <p>
+            Las hojas de estilo se pueden incluir de las siguientes maneras:
+        </p>
+        <ul>
+           
+        <li> <h2>Inline:</h2> Dentro de la misma línea de código por lo que solo la afecta a ella.
+        <br>
+            En etiquetas mediante el atributo global style como en el ejemplo:
+        <br>
+            < p style="color red">Texto afectado< /p>
+        </li>
+        <br>
+        <li> <h2>Internal:</h2> Dentro del HTML, afectándolo todo.
+        <br>
+            En la cabecera del documento mediante la etiqueta < style>:
+        <br>
+            < head>
+                < style>
+                    hr{color red}
+                < /style>
+            < /head>
+        </li>
+            <br>
+        <li> <h2>External:</h2> En un fichero independiente.
+       
+            < head>
+                < link rel="stylesheet" href="css/fichero.css"/>
+            < /head>
+        </li>
+        </ul>
+        </div>
+			<! ---------E---N---D----Inclusion HTML----------------------- >
+        
+         	<! ----------------------Selectores----------------------- >  
+    	<h1>Selectores <button class = "right" onclick="slidevis('seleccss')">👀</button></h1>
+    	<div id="seleccss">
+    	 <p>
+            Los selectores son las principales etiquetas de CSS. Los principales son:        
+        </p>
+       
+        <ul>
+
+        <li> <h2>Elemento:</h2> Define el estilo para ese tipo de etiqueta. Ejemplo:
+        <br>
+            body{color:black}
+        </li>
+       
+        <br>
+        <br>
+       
+        <li> <h2>Clases (class):</h2> Estilo para las etiquetas cuyo atributo class tome ese valor. Ejemplo:
+        <br>
+			<i>En CSS:</i>
+        <br>
+            .centrado{text-align:center}
+        <br>
+            <i>En HTML:</i>
+        <br>
+            < p class="centrado">...< /p>
+        </li>
+       
+        <br>
+        <br>
+        <li> <h2>Identificador (id):</h2> Estilo a aplicar al elemento con ese identificador (atributo id). Ejemplo:
+        <br>
+            <i>En CSS:</i>
+        <br>
+            #rojo{color:red}
+        <br>
+            <i>En HTML:</i>
+        <br>
+            < p id="rojo">...< /p>
+        </li>
+        </ul>
+    	</div>
+			<! ---------E---N---D----Selectores----------------------- >
+       
+       		<! ----------------------Cajas----------------------- >
+        <h1>Modelo de caja <button class = "right" onclick="slidevis('cajacss')">👀</button></h1>
+        <div id="cajacss">
+			<img src="http://es.html.net/tutorials/css/figure008.es.gif">
+        <ul>
+            <li><h2>Margen (margin):</h2>Distancia que queremos que haya entre nuestro elemento y el resto de los 
+            elementos. Es invisible.
+            <br>
+            Si queremos que cada uno de los márgenes laterales sea diferente utilizamos: 
+            <br>
+            <br>
+            margin-top:10px
+            <br>
+            margin-bottom:20px
+            <br>
+            margin-left:30px
+            <br>
+            margin-right:40px
+            <br>
+            <br>
+            Otra opción es escribir los cuatro valores en sentido horario por lo que los valores anteriores quedarían así:
+            <br>
+            margin:10px 40px 20px 30px 
+            <br>
+            <br>
+            Para centrar el contenido de manera horizontal utilizamos <strong>margin:auto</strong>
+            <br>
+            <br>
+        </li>
+            <li><h2>Borde (border):</h2>Línea que delimita nuestra caja. Podemos definir su color, grosor y 
+            modelo (están predeterminados como el "solid"). 
+            <br>
+            <br>
+            Si queremos que cada uno de sus lados tenga un 
+            grosor diferente podemos diferenciarlos utilizando <strong>"border-top", "border-bottom", "border-left" 
+            </strong>y <strong> "border right".</strong> </li>
+            <br>
+            border:20px solid rgb(23,35,67)
+            <br>
+            <br>
+            <li><h2>Relleno (padding):</h2>Distancia entre el borde y la letra:
+            <br>
+            <br>
+            padding:20px
+            <br>
+            <br>
+            <li><h2>Contenido:</h2>La información.</li>
+            </li>
+        </ul>
+        
+        </div>
+			<! ---------E---N---D----Cajas----------------------- >
+			
+			<! ----------------------Posicionamiento----------------------- >
+        <h1>Posicionamiento <button class = "right" onclick="slidevis('poscss')">👀</button></h1>
+        
+        	<div id="poscss">
+			Utilizando el modelo de caja, podemos colocar la información en la posición que más nos convenga.
+            Estos son los tipos de posicionamiento de los que disponemos:
+           
+            <h2>Posicionamiento fijo</h2>
+                <br>
+                Independientemente del tipo de posicionamiento fijo, disponemos de estos cuantro valores:
+                <ul>
+                <li>top:valor</li>
+                <li>bottom:valor</li>
+                <li>right:valor</li>
+                <li>left:valor</li>
+                </ul>
+                <br>
+                <strong>NOTA:</strong>no es necesario utilizarlos todos, solo los que nos hagan falta para colocar
+                la caja donde queramos.
+                    <ul>
+                    <li> <strong>Relativa(position:relative):</strong>Posicionamos el elemento con respecto al flujo
+                    normal de la página; es decir, con respecto al lugar que por defecto le correspondería.
+                    </li>
+                    <br>
+                    <li><strong>Absoluta(position:absolute):</strong>Posicionamos el elemento tomando como referencia
+                    la ventana del navegador o el elemento posicionado (que tenga cualquier valor de position) más cercano
+                    si es padre del elemento que queremos posicionar.
+                    </li>
+                    </ul>
+           
+            <h2>Posicionamiento flotante</h2>
+                <ul>
+                <li><strong>Float:</strong></li>Aplicable a left y right, hace que el elemento pierda el flujo normal 
+                de ubicación y se coloque a la derecha o a la izquierda del contenedor, ocupando el resto de elementos 
+                del espacio. Es decir, el elemento con float se colocará por encima de todo lo demás.
+                <br>
+                <br>
+                float:left
+                <br>
+                <br>
+                <li><strong>Clear:</strong></li>Aplicable a izquierda, derecha o ambos, impide que un elemento flote, 
+                a izquierda o derecha, sobre él.
+                <br>
+                <br>
+                clear:both
+                <br>
+                <br>
+                </ul>
+        </div>
+			<! ---------E---N---D----Posicionamiento----------------------- >
+                
+
+
+		</div>
+			
+	<! ----------------------Incluimos los scripts y JQUERRY para el JS----------------------- >
+	<script src="js/show-hide.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	</body>
+</html>

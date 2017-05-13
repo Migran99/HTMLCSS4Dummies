@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="usuario" >
+		<title>HTML y CSS</title>
+	</head>
+	<body>
+		<h1 id="titulo">HTML Y CSS</h1>
+		
+		<! ----------------------Barra navegacion arriba----------------------- >
+		<nav>
+			<a href="index.html">Índice</a>
+			<a href="html.html">HTML</a>
+			<a href="css.html">CSS</a>
+			<a class="right" href="creditos.html">Créditos</a>
+			
+		</nav>
+		
+		<! ----------------------Barra navegacion lateral----------------------- >
+		<nav id = "latnav">
+			<a href="#introhtml" class="block">Introducción a HTML</a>
+			<a href="#estructurahtml" class="block">Estructura Básica</a>
+			<a href="#ethtml" class="block">Etiquétas Básicas</a>
+			<a href="#elehtml" class="block">Elementos Básicos</a>
+		</nav>
+		
+		<! ----------------------Contenido----------------------- >
+		<div id="content" align="justify">
+			
+			<! ----------------------Introduccion HTML----------------------- >
+			<h1>Introducción a HTML <button class = "right" onclick="slidevis('introhtml')">👀</button></h1>
+			<div id="introhtml"> 
+			
+        
+        <p> Vamos a explicar qué ocurre cuando escribimos una dirección web en nuestro 
+        navegador (el programa que usamos para ver páginas web), desde que tecleamos 
+        la dirección hasta que vemos la página solicitada en nuestro ordenador.
+        </p>
+        
+        <h2>Premisas básicas</h2>
+ 			
+ 			<p> Primero escribimos la dirección o URL del sitio web al que queremos entrar, 
+			a continuación y sin que nosotros nos demos cuenta, nuestro navegador solicita la página web
+			al servidor que la alberga.
+			<br>
+			<br>
+			Acto seguido, el servidor envía de vuelta los datos a nuestro ordenador a través de Internet.
+			Finalmente, nuestro navegador interpretará los datos, mostrando el resultado en la pantalla de nuestro ordenador.
+ 			</p>
+
+			<img src=http://i.imgur.com/Nu8FU.png width="700" align="center">
+			
+			<p id="pa1" >Entrando más en detalle: 
+			<br>
+			<br>
+				<ul>
+				<li>
+			Nuestro ordenador de casa envía una petición al servidor y le devuelve una
+			 respuesta con los datos en lenguaje html.
+			 	</li>
+			 <br>
+			<br>
+				<li>
+			A partir de aquí, el navegador que estemos utilizando interpretará esos datos y los mostrará en la 
+			pantalla.
+				</li>
+			<br>
+			<br>
+				<li> 
+			Del mismo modo podemos obtener visualizaciones distintas para cada navegador debido a que
+			son éstos los que interpretan los datos obtenidos.
+				</li> 
+			<br>
+			<br>
+				<li>
+			Por ejemplo, podemos usar como navegador Internet Explorer
+			o Firefox, y según usemos uno u otro obtener resultados distintos porque cada navegador
+			interpreta la información de una manera distinta.
+				</li>
+			<br>
+			<br>
+				</ul>
+			Estos son los navegadores más comunes:
+			</p>
+        
+        <img src=https://autopistadigital.files.wordpress.com/2013/07/navegadores1.jpg width="400" align="center" >
+        
+        <h2> ¿Qué es HTML y HTTP? </h2>
+        
+        <ul>
+        <li> <strong> HTTP: servidor y cliente: </strong>
+       <p> ​El http son las siglas de “Hypertext
+		Transfer Protocol” es un protocolo de transferencia donde se utiliza un
+		sistema mediante el cual se permite la transferencia de información entre
+		diferentes servicios y los clientes que utilizan páginas web.
+		Get Sent es una solicitud, que funciona escribiendo la palabra “Get” seguido
+		del nombre de documento que quieras, que un usuario pide a un servidor
+		para poder acceder a la página que desee y este le facilitará todo su código
+		HTML </p>
+		</li> 
+		<li> <strong> HTML </strong> ​
+		<p>Es un lenguaje de marcado que se utiliza para el desarrollo de
+		páginas de Internet. Se trata de la sigla que corresponde a HyperText Markup
+		Language, es decir, Lenguaje de Marcas de Hipertexto, que podría ser
+		traducido como Lenguaje de Formato de Documentos para Hipertexto.
+		Se encarga de desarrollar una descripción sobre los contenidos que
+		aparecen como textos y sobre su estructura, complementando dicho texto
+		con diversos objetos (como fotografías, animaciones, etc).
+		</p>	
+		</li>
+		</ul>
+			</div>
+		
+			<! ---------E---N---D----Introduccion HTML----------------------- >
+		
+		
+			<! ----------------------Estructura HTML----------------------- >
+			<h1 > Estructura básica HTML <button class = "right" onclick="slidevis('estructurahtml')">👀</button> </h1>
+			<div id="estructurahtml">
+		<p>HTML se emplea únicamente para definir la estructura y el contenido
+		o información de una página web, la presentación visual no se define
+		con HTML.</p>
+
+		<h2>Sintaxis básica</h2>
+ 
+		<ul>
+		<li> <strong> Elemento: </strong>
+		<p>Es el componente básico de una página web, una
+		página web está compuesta por un conjunto de elementos escritos
+		en un orden concreto.
+		Un elemento se compone de una etiqueta inicial o de apertura, y una
+		etiqueta final o de cierre.
+
+		Hay más de 100 etiquetas, aqui te mostramos algunos ejemplos:</p>
+		
+		
+		<table>
+			<thead>
+				<tr>
+					<th>Etiqueta</th>
+					<th>Descripción</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>< html>...< /html> </td>
+					<td>Declara que la página web está escrita en HTML. </td>
+				</tr>	
+				
+				<tr>
+					<td>< head>...< /head> </td>
+					<td>Delimita el encabezado de la página.</td>
+				</tr>
+				
+				<tr>
+					<td>< title>...< /title> </td>
+					<td>Define el título (no mostrado en la página).</td>
+				</tr>
+				
+				<tr>
+					<td>< body>...< /body> </td>
+					<td>Delimita el cuerpo de la página.</td>
+				</tr>
+				
+				<tr>
+					<td>< p>...< /p></td>
+					<td>Empieza un párrafo.</td>
+				</tr>
+
+			</tbody>
+		</table>
+		<br>
+ 
+ 
+		<li> <strong> Atributo: </strong>
+		<p>La etiqueta inicial puede llevar atributos, pero la final
+		nunca lleva. En HTML, los atributos pueden llevar un valor. </p>
+
+		<li> <strong> Contenido: </strong>
+		<p>Es todo lo que se escriba entre la etiqueta inicial y final: el
+		contenido puede estar formado por otras etiquetas de HTML o puede
+		ser simplemente texto como en este ejemplo.</p>
+ 
+ 
+		<li> <strong> La etiqueta < html>: </strong>
+		<p>Es la etiqueta principal, sólo puede existir una y toda la página web
+		debe escribirse entre la etiqueta inicial y final de html.
+		La etiqueta head define la primera parte de una página web, la cabecera.
+		Normalmente lo que se escribe en la cabecera no aparece representado en la página
+		web cuando se visualiza en un navegador web, sino que se emplea para definir los
+		metadatos, información sobre la página o instrucciones sobre cómo procesar la página
+		web. <br>
+		Dentro de la cabecera se puede escribir la etiqueta title que es obligatoria, sólo puede
+		haber una, y se emplea para definir el título de la página.
+		La etiqueta body define la segunda parte de una página web, el cuerpo. Lo que se
+		escribe en el cuerpo sí que aparece representado en la página web cuando se visualiza
+		en un navegador web.</p>
+
+		<img src="fotos/img1.png" height="500px">
+
+		<li> <strong> < h1>, < h2> y hasta < h6>: </strong>
+
+		<p>Se emplean para definir los encabezados o títulos en la página. <br> Existen seis niveles de importancia, siendo < h1> el más importante, y < h6>
+		el nivel menos importante. Normalmente, usarás los niveles < h1>, < h2> y < h3>.
+		p se emplea para definir un párrafo de texto.
+		< strong>, se emplea para destacar un fragmento de texto importante.
+		< em> se emplea para definir un texto enfatizado.</p>
+			</div>	
+			<! ---------E---N---D----Estructura HTML----------------------- >
+			
+			<! ----------------------Etiquetas HTML----------------------- >
+		<h1>Etiquetas básicas <button class = "right" onclick="slidevis('ethtml')">👀</button></h1>
+		<div id="ethtml">
+		<p> Vamos a explicar conceptos básicos de HTML. <br>
+			En primer lugar veremos cuál es la estructura básica que toda página HTML debe cumplir. 
+			Para ello introduciremos las etiquetas HTML, HEAD y BODY, y sus respectivas etiquetas de 
+			cierre. <br>
+			Toda página web viene definida con la siguiente estructura básica:
+			</p>
+
+ 		<img src="fotos/img2.png" align="center">
+ 
+		<h2>HTML</h2>	
+		<p>La etiqueta < html> define que se trata de código HTML.</p>
+
+		<h2>HEAD</h2>
+		<p>La cabecera del documento es la sección comprendida 
+		entre < head> y < /head>. 
+		En ella se debe encontrar, obligatoriamente, el título 
+		(entre las etiquetas < title> y < /title>). <br>
+
+		El <strong>título</strong> de la página debe describir su contenido <br>
+
+		Otras etiquetas pueden ir incluidas en < Head> (son opcionales) y son
+		las siguientes:
+ 		</p>
+		<ul>
+        <li> <strong> < Style> </strong>
+       <p> ​Incluye estilos de CSS que permiten dotar de colores,
+        bordes, imágenes de fondo, etc. a los elementos de la página 
+        web. </p>
+		</li> 
+			<li> <strong> < Meta> </strong> ​
+			<p>Sirven para incluir información que no se muestra como
+			 parte de la página web pero sirve para informar de 
+			 características de la página web, como su descripción breve
+			  y sus palabras clave.
+			  
+			  <li> <strong> < Link> </strong> ​
+			<p>La etiqueta < link>, permite realizar la carga y 
+			establecer la relación existente entre el documento web actual
+			 y un recurso externo. Esta etiqueta es normalmente muy utilizada
+			  para realizar la carga de hojas de estilo para el documento web. <br>
+			  
+			  Entre los atributos a destacar que tiene la etiqueta se 
+			  encuentran: <strong> href </strong> (permite establecer URLs), 
+			   <strong> hreflang </strong> (establece el lenguaje del documento), 
+			   <strong>size</strong> (establece el tamaño del atributo)
+			    <strong>media</strong> (sirve para indicar el tipo de dispositivo para el 
+			    cual se esta realizando el enlace.) entre otras.		   
+			     
+		</p>
+		</ul>
+		<h2>BODY</h2>
+
+		<p> El cuerpo (body) del documento html es normalmente lo más importante.
+ 		Es aquí donde debemos colocar el contenido de nuestra
+  		página: texto, fotos, etc. <br>
+
+		El cuerpo está delimitado por las etiquetas < body> y < /body>.</p>
+		</div>
+		<! ---------E---N---D----Estructura HTML----------------------- >
+
+		<! ----------------------Elementos HTML----------------------- >
+		 <h1> Elementos básicos HTML HTML <button class = "right" onclick="slidevis('elehtml')">👀</button></h1>
+			<div id="elehtml">
+			<p>Veamos a continuación más estructuras básicas para 
+ poder desarrollar páginas web:</p>
+ 
+ <h2>Formatos de texto</h2>
+
+       <p> ​Las etiquetas que aparecen a continuación, se usan para dar formato
+       al texto (negrita, cursiva, subrayado, tamaño...): </p>
+
+ <img src="fotos/img3.png" align="center">
+ 
+<p> A continuación se puede apreciar un ejemplo de uso de estas propiedades con sus
+respectivos significados: </p>
+
+<img src="fotos/img4.png" align="center">
+  
+  <img src="fotos/img5.png" align="center">
+  
+ 
+ <h2>Imágenes</h2>
+ 
+<p> Las imágenes son uno de los elementos más importantes de las
+páginas web. <br>
+De hecho, prácticamente todas las páginas web contienen alguna
+imagen y la mayoría incluyen decenas de imágenes. <br>
+Las imágenes de contenido son las que proporcionan
+información y complementan la información textual. <br>
+Incluir imágenes en una página web es muy sencillo,
+ simplemente debemos tener en cuenta que las imágenes tienen 
+ que tener los formatos GIF, JPG o PNG. Las imágenes dentro de 
+ una página web se incluyen utilizando la etiqueta < img>,
+  que no tiene una etiqueta correspondiente de cierre. <br>
+  <br>
+ Los atributos a emplear son los siguientes: <br>
+ <p/>
+  <img src="fotos/img6.png"
+  align="center">
+ 
+ <p> A continuación se puede ver un ejemplo del uso de estos atributos aplicados a una imagen: </p>
+
+<img src="fotos/Imagen Html.png"
+  align="center">
+  
+  <img src="fotos/Giralda.png"
+  align="center"> 
+ <br>
+ 
+  <h2>Enlaces</h2>
+  
+  
+<p>Uno de los elementos básicos a la hora de crear páginas web son
+los enlaces.Los enlaces son los elementos que nos permiten
+navegar por la web, es decir, ir a otras páginas de una misma web, o
+a páginas de webs externas.También podemos enlazar a diferentes
+partes de un mismo documento.El elemento utilizado para crear
+vínculos es < a> <br>
+<br>
+Aquí tenemos un ejemplo:<br>
+
+<img src="fotos/HTMl Hipervinculos .png"
+  align="center">
+  
+  <img src="fotos/HIperivnculos 1.png"
+  align="center">
+  
+  <img src="fotos/Hipervinculos 2.png"
+  align="center">
+
+<ul>
+
+ <li> < a> es la etiqueta enlace
+ <li> El atributo href nos indica hacia dónde apuntará nuestro enlace. En este
+caso, estamos enlazando a una página web externa.
+<li> El valor del atributo href ha de ser la ruta del documento al que quiero
+enlazar.
+<li> El texto marcado por la etiqueta a, en este caso "ir a google" será el
+hipervÍnculo sobre el que clicaremos para saltar a la página de Google. 
+<li> Por defecto, el texto se verá de color azul y subrayado.
+
+ 
+ </ul>
+ <br>
+<h2>Listas</h2>
+<p>En la mayoría de los documentos HTML se usan listas para organizar el texto.
+ El lenguaje HTML incorpora distintas formas de mostrar listas, por ejemplo con 
+ viñetas sencillas o también con letras o números. Además, para que las páginas 
+ tengan más vistosidad, se pueden colocar imágenes delante de cada párrafo. <br>
+  Las listas no ordenadas son aquellas que se encuentran entre las etiquetas
+   < ul> y < /ul> (ul indica unordered list), etiqueta de apertura y cierre respectivamente. 
+   Si queremos añadir un nuevo punto, lo tendremos que hacer dentro de las etiquetas < li> y < /li>.
+Si no le indicamos nada a la etiqueta < li>, la viñeta o marca que indica que se trata de un elemento 
+de una lista se generará de forma automática. <br>
+<br>
+Aquí tenemos un ejemplo:<br>
+<br>
+<img src="fotos/Listas1.png"
+  align="center">
+  
+  <img src="fotos/Listas2.png"
+  align="center">
+ </p>
+ 
+ 
+</p>
+  
+ <br>
+  
+<h2>Tablas</h2> 
+  
+<p> Las tablas pueden ser consideradas como un grupo de filas donde cada una de ellas contiene un grupo de celdas.
+ Una tabla puede ser insertada en un documento HTML usando tres elementos básicos: el elemento TABLE 
+ (estructura contenedora principal), el elemento TR (contenedor de fila) y el elemento TD (celda).
+Cuando el contenido de una celda debe ser vacío, deberías usar una espacio en blanco
+ (que en HTML se escribe como &nbsp;) como su contenido. Esto hará que tu página se visualice correctamente, 
+ ya que algunos navegadores tienen problemas representando celdas vacías. Ejemplo: < td>&nbsp;< /td>
+<br>
+<br>
+
+Veamos un ejemplo. Crea un archivo ejemplo.html con este código y visualízalo:
+<br>
+<br>
+<img src="fotos/Tabla1.png"
+  align="center">
+  
+  <img src="fotos/Tabla2.png"
+  align="center">
+</p>
+			</div>
+ 
+		<! ---------E---N---D----Estructura HTML----------------------- >
+			
+	</div>
+			
+	<! ----------------------Incluimos los scripts y JQUERRY para el JS----------------------- >
+	<script src="js/show-hide.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	</body>
+</html>
