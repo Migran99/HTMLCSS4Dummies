@@ -47,6 +47,8 @@ img {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 5px;
+    max-width: 100%;
+    height: auto;
 }
 
 img:hover {
